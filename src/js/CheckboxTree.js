@@ -137,6 +137,7 @@ class CheckboxTree extends React.Component {
         const { checkModel, noCascade, onCheck } = this.props;
         const model = this.state.model.clone();
         const node = model.getNode(nodeInfo.value);
+        console.log('------oncheck-------');
 
         model.toggleChecked(nodeInfo, nodeInfo.checked, checkModel, noCascade);
         onCheck(model.serializeList('checked'), { ...node, ...nodeInfo });
